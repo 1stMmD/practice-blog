@@ -49,7 +49,10 @@ const RightContainer = ({styles }) => {
                     </>
                 }
                 <Box
+                component={span}
                 sx={{
+                    display : "flex",
+                    flexDirection : "row",
                     position : "relative",
                     width:{
                         xs : "230px",
@@ -60,8 +63,6 @@ const RightContainer = ({styles }) => {
                     },
                     gap :3,
                     height : "fit-content",
-                    display : "flex",
-                    flexDirection : "row",
                     alignItems : "center",
                     justifyContent : "flex-start" ,
                     mb : 0,
