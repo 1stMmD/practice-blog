@@ -72,6 +72,7 @@ const RightContainer = ({styles }) => {
                 }}
                 >
                     {blogs && blogs.map((blog) => {
+                        if(blog){
                         return <BlogCard 
                         cardClass={`${myStyle.card} 
                         ${isBackward && blogs.indexOf(blog) === current - 1 ? `${myStyle.lastCard} ${myStyle.toRight}` : ""}
@@ -88,6 +89,7 @@ const RightContainer = ({styles }) => {
                         body={blog.body}
                         id={blog.id}
                         />
+                        }
                     })}
                     </Box>
 
