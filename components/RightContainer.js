@@ -71,7 +71,7 @@ const RightContainer = ({styles }) => {
                     zIndex : "1"
                 }}
                 >
-                    {blogs.map((blog) => {
+                    {blogs && blogs.map((blog) => {
                         return <BlogCard 
                         cardClass={`${myStyle.card} 
                         ${isBackward && blogs.indexOf(blog) === current - 1 ? `${myStyle.lastCard} ${myStyle.toRight}` : ""}
