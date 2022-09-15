@@ -13,8 +13,12 @@ const LeftContainer = ({styles , setShowTime}) => {
   },[])
 
     return (
+        
         <div className={styles}>
       
+        {
+          show &&
+          <>
       <Typography 
       variant="h5"
       sx={{
@@ -90,8 +94,7 @@ const LeftContainer = ({styles , setShowTime}) => {
             For All Posts
         </Typography>
        
-        {
-        show &&
+        
         <Button 
         variant="outlined"
         size="large"
@@ -132,10 +135,11 @@ const LeftContainer = ({styles , setShowTime}) => {
           }}
           >Click Me</Button>
       
-        }
+        
 
       </Box>
-
+        </>
+      }
       </div>
     );
 }
