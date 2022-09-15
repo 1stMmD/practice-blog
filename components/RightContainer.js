@@ -46,11 +46,7 @@ const RightContainer = ({styles }) => {
                     translateValue="100%"
                     opacityValue=".6"
                     />
-                    </>
-                }
 
-                {
-                    !isPending &&
                     <Box
                 component="div"
                 sx={{
@@ -92,8 +88,9 @@ const RightContainer = ({styles }) => {
                         />
                     })}
                     </Box>
+                    </>
                 }
-                
+
             </Box>
             
             {
