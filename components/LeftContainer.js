@@ -2,11 +2,15 @@ import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
 import { useRouter } from 'next/router';
-import { useState } from "react";
+import { useState , useEffect } from "react";
 const LeftContainer = ({styles , setShowTime}) => {
 
   const router = useRouter();
-  const [show , setShow] = useState(true);
+  const [show , setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+  },[])
 
     return (
         <div className={styles}>
