@@ -25,7 +25,7 @@ const BlogCard = (
         {
         
         show &&
-        
+
         <Card
         className={cardClass}
         component="span"
@@ -67,7 +67,6 @@ const BlogCard = (
             bgcolor : 'grey.light',
             boxShadow : "0 10px 10px 2px rgba(0,0,0,.1)",
             scrollSnapAlign : "end",
-            display : "flex",
             flexDirection : "column" ,
             alignItems : "center",
             //will change later 👇
