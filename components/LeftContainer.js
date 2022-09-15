@@ -2,10 +2,11 @@ import Typography from '@mui/material/Typography';
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
 import { useRouter } from 'next/router';
-
+import { useState } from "react";
 const LeftContainer = ({styles , setShowTime}) => {
 
   const router = useRouter();
+  const [show , setShow] = useState(true);
 
     return (
         <div className={styles}>
@@ -86,7 +87,7 @@ const LeftContainer = ({styles , setShowTime}) => {
         </Typography>
        
         {
-          
+        show &&
         <Button 
         variant="outlined"
         size="large"
