@@ -1,7 +1,6 @@
-import React from "react"
+import {useState , useEffect} from "react"
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Link from "next/link";
 
 
@@ -17,8 +16,16 @@ const BlogCard = (
     cardClass
     }
 ) => {
-
+    const [show , setShow] = useState(false);
+    useEffect(() => {
+        setShow(true);
+    })
     return (
+        <>
+        {
+        
+        show &&
+        
         <Card
         className={cardClass}
         component="span"
@@ -65,7 +72,7 @@ const BlogCard = (
             alignItems : "center",
             //will change later 👇
             justifyContent : "flex-start",
-
+            
             //for being a reusable component👇🏻
             scale : scaleValue,
             transform : `translate(${translateValue})`,
@@ -167,6 +174,8 @@ const BlogCard = (
                 </Link>
 
         </Card>
+        }
+        </>
     );
 }
 
