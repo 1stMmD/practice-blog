@@ -48,50 +48,7 @@ const RightContainer = ({styles }) => {
                     />
                     </>
                 }
-                <Box
-                component="span"
-                sx={{
-                    display : "flex",
-                    flexDirection : "row",
-                    position : "relative",
-                    width:{
-                        xs : "230px",
-                        sm : "320px",
-                        md : "420px",
-                        lg : "460px",
-                        xl : "520px"
-                    },
-                    gap :3,
-                    height : "fit-content",
-                    alignItems : "center",
-                    justifyContent : "flex-start" ,
-                    mb : 0,
-                    scrollSnapType : "x mandatory",
-                    scrollBehavior : "smooth",
-                    bgcolor : "transparent",
-                    zIndex : "1",
 
-                }}
-                >
-                    {blogs.map((blog) => {
-                        return <BlogCard 
-                        cardClass={`${myStyle.card} 
-                        ${isBackward && blogs.indexOf(blog) === current - 1 ? `${myStyle.lastCard} ${myStyle.toRight}` : ""}
-                        ${isForward && blogs.indexOf(blog) === current - 1 ? `${myStyle.lastCard} ${myStyle.toLeft}` : ""}
-                        ${isBackward && blogs.indexOf(blog) === current ? `${myStyle.currentCard} ${myStyle.toRight}` : ""}
-                        ${isForward && blogs.indexOf(blog) === current ? `${myStyle.currentCard} ${myStyle.toLeft}` : ""}
-                        ${isBackward && blogs.indexOf(blog) === current + 1 ? `${myStyle.nextCard} ${myStyle.toRight}` : ""}
-                        ${isForward && blogs.indexOf(blog) === current + 1 ? `${myStyle.nextCard} ${myStyle.toLeft}` : ""}
-                        ${!isForward && !isBackward && blogs.indexOf(blog) === current ? `${myStyle.defaultCard}` : ""}
-                        ${!isForward && !isBackward && blogs.indexOf(blog) === current + 1 ? `${myStyle.defaultCard}` : ""}
-                        `}
-                        key={blog.id} 
-                        title={blog.title}
-                        body={blog.body}
-                        id={blog.id}
-                        />
-                    }) }
-                </Box>
             </Box>
             
             {
