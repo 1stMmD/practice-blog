@@ -85,6 +85,8 @@ const LeftContainer = ({styles , setShowTime}) => {
             For All Posts
         </Typography>
        
+        {
+          
         <Button 
         variant="outlined"
         size="large"
@@ -125,6 +127,8 @@ const LeftContainer = ({styles , setShowTime}) => {
           }}
           >Click Me</Button>
       
+        }
+
       </Box>
 
       </div>

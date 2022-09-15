@@ -147,12 +147,12 @@
   .modelCard2
   {
     opacity: 0;
-    animation: model-card2 1000ms 1000ms forwards;
+    animation: model-card2 1000ms  forwards;
   }
 
   .btn
   {
     transform: scale(0);
     opacity: 0;
-    animation: btn-show-up  1000ms 800ms forwards;
+    animation: btn-show-up  1000ms  forwards;
   }
