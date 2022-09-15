@@ -17,7 +17,7 @@ export default function Home() {
   )
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container}> 
 
       <PageChanging
       showTime={showTime}/>
@@ -26,7 +26,7 @@ export default function Home() {
 
       <LeftContainer styles={styles.container_left} setShowTime={setShowTime} />
       <RightContainer styles={styles.container_right}/>
-    
+
     </div>
   )
 }

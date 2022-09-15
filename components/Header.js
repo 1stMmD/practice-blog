@@ -1,16 +1,27 @@
 import  Box from "@mui/material/Box";
+import {useState , useEffect} from "react";
 
 const Header = () => {
+    const [show , setShow] = useState(false);
 
     const smLinks = (link) => {
        
         window.location = link; 
      }
 
+     useEffect(() => {
+        setShow(true);
+     })
+
     return (
-        <Box
-        sx={{
-            position : "absolute",
+        <>
+            {
+                
+            show &&
+
+            <Box
+            sx={{
+                position : "absolute",
             top: '0',
             left : "0",
             width : "100%",
@@ -61,6 +72,8 @@ const Header = () => {
             <img src="linkedin.svg" className="links" onClick={() => {smLinks("https://www.linkedin.com/in/mohammad-jamali-101499230")}}/>
 
         </Box>
+        }
+        </>
     );
 }
 
