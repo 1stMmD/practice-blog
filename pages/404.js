@@ -2,10 +2,15 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useRouter } from "next/router";
+import { useState , useEffect } from "react";
 
 const NotFound = () => {
     const router = useRouter();
+    const [show , setShow] = useState(false)
 
+    useEffect(() => {
+        setShow(true);
+    },[])
     const ButtonSX = {
         borderRadius : "10rem",
         fontSize : {
@@ -36,6 +41,11 @@ const NotFound = () => {
     }
 
     return (
+        <>
+        {
+
+        show &&
+
         <Box
         sx={{
             width : "100%",
@@ -110,6 +120,8 @@ const NotFound = () => {
             </Box>
 
         </Box>
+        }
+        </>
     );
 }
 
