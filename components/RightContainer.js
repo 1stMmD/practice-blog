@@ -1,5 +1,5 @@
 import {useState } from 'react';
-import myStyle from "../styles/RightContainer.module.css";
+import myStyle from "../styles/RightContainer.module.scss";
 import useFetch from '../hooks/useFetch';
 import Box from "@mui/material/Box";
 import BlogCard from './BlogCard';
@@ -17,7 +17,10 @@ const RightContainer = ({styles }) => {
    
     return (
         <div className={styles}>
+           {
             
+            !isPending &&
+
             <Box
             sx={{
                 p : 3,
@@ -28,9 +31,8 @@ const RightContainer = ({styles }) => {
                 overflow : "hidden",
             }}>
 
-                {
-                    !isPending &&
-                    <>
+
+                    
                     <BlogCard 
                     cardClass={myStyle.modelCard2}
                     title="" 
@@ -88,10 +90,9 @@ const RightContainer = ({styles }) => {
                         />
                     })}
                     </Box>
-                    </>
-                }
 
             </Box>
+            }
             
             {
             !isPending &&

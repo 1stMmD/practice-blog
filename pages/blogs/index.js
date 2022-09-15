@@ -1,4 +1,4 @@
-import myStyle from "../../styles/RightContainer.module.css";
+import myStyle from "../../styles/RightContainer.module.scss";
 
 import Container  from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
