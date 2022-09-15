@@ -49,7 +49,9 @@ const RightContainer = ({styles }) => {
                     </>
                 }
 
-                <Box
+                {
+                    !isPending &&
+                    <Box
                 component="div"
                 sx={{
                     display : "flex",
@@ -89,8 +91,9 @@ const RightContainer = ({styles }) => {
                         id={blog.id}
                         />
                     })}
-                </Box>
-
+                    </Box>
+                }
+                
             </Box>
             
             {
