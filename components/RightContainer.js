@@ -49,7 +49,7 @@ const RightContainer = ({styles }) => {
                     </>
                 }
                 <Box
-                component={span}
+                component="span"
                 sx={{
                     display : "flex",
                     flexDirection : "row",
