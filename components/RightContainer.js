@@ -1,7 +1,8 @@
 import {useState } from 'react';
 import myStyle from "../styles/RightContainer.module.scss";
 import useFetch from '../hooks/useFetch';
-import Box from "@mui/material/Box"
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import BlogCard from './BlogCard';
 import IconButton  from '@mui/material/IconButton';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
@@ -49,8 +50,8 @@ const RightContainer = ({styles }) => {
                     </>
                 }
 
-                <Box
-                component="span"
+                <Container
+                component="div"
                 sx={{
                     display : "flex",
                     flexDirection : "row",
@@ -89,7 +90,7 @@ const RightContainer = ({styles }) => {
                         id={blog.id}
                         />
                     })}
-                </Box>
+                </Container>
 
             </Box>
             
