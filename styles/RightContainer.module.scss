@@ -1,0 +1,158 @@
+/*Welcome to hell , */
+/*this is the logic behind that slider */
+
+
+/*animations for moving cards to left👇🏻 */
+
+@keyframes move-to-left-last {
+    0%{transform : translateX(0)};
+    100%{
+        transform : translateX(-20%) scale(.8);
+        opacity: 0;
+        display:none;
+      }
+  }
+  
+  @keyframes move-to-left-current {
+    0%{transform: translateX(50%);}
+    100%{transform: translateX(0);}
+  }
+  
+  @keyframes move-to-left-next {
+    0%{transform: translateX(60%);}
+    100%{transform: translateX(0);}
+  }
+
+  /* animations for moving cards
+  to right👇🏻 */
+  
+  @keyframes move-to-right-current {
+    0%{opacity: .2;
+       transform: scale(.8) translateX(-20%);
+      }
+    100%{
+      opacity: 1;
+      transform: scale(1) translateX(0);
+    }
+  }
+  
+  @keyframes move-to-right-next {
+    0%{
+      transform: translateX(-50%);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  
+  /* //default animation for first time of loading👇🏻  */
+
+  @keyframes default-card {
+    0%{
+      transform: scale(.2);
+      opacity: 0;
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @keyframes model-card1 {
+    0%{
+      opacity:0;
+    }
+    100%
+    {
+      opacity:.6;
+    }
+  }
+
+  @keyframes model-card2 {
+    0%{
+      opacity:0;
+      transform: scale(0);
+    }
+    100%
+    {
+      opacity: .5;
+    }
+  }
+
+  @keyframes btn-show-up {
+    to{
+      transform:scale(1);
+      opacity: 1;
+    }
+  }
+
+/* // card class for hiding elements
+// 👇🏻 */
+
+  .card 
+  {
+    display : none;
+    
+  }
+  
+  .lastCard.toLeft
+  {
+    position: absolute;
+    left:0;
+    display:flex;
+    animation:move-to-left-last 1000ms forwards;
+  }
+  
+  .currentCard.toLeft
+  {
+    display: flex;
+    animation : move-to-left-current 1000ms forwards;
+  
+  }
+  
+  .nextCard.toLeft
+  {
+    display: flex;
+    animation: move-to-left-next 1000ms forwards;
+  }
+  
+  .lastCard.toRight
+  {
+    display: none;
+  }
+  
+  .currentCard.toRight
+  {
+    display: flex;
+    animation: move-to-right-current 1000ms forwards;
+  }
+  
+  .nextCard.toRight
+  {
+    display: flex;
+    animation: move-to-right-next 1000ms forwards;
+  }
+  
+  .defaultCard
+  {
+    display: flex;
+    animation: default-card 1000ms forwards;
+  }
+
+  .modelCard1
+  {
+    opacity: 0;
+    animation: model-card1 1000ms 1000ms forwards;
+  }
+
+  .modelCard2
+  {
+    opacity: 0;
+    animation: model-card2 1000ms 1000ms forwards;
+  }
+
+  .btn
+  {
+    transform: scale(0);
+    opacity: 0;
+    animation: btn-show-up  1000ms 800ms forwards;
+  }
